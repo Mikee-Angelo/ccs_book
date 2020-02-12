@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Main">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../dist/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../dist/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../dist/datatables/datatables.min.css">
+    <link rel="stylesheet" href="../dist/datatables//Buttons-1.6.1/css/buttons.bootstrap4.min.css">
+    <link href="../node_modules/angular-datatables/dist/css/angular-datatables.css" />
+    <link href="../node_modules/angular-datatables/dist/plugins/bootstrap/datatables.bootstrap.min.css" />
+    <link rel="stylesheet" href="../dist/fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-light sticky-top pt-4">
+        <a class="navbar-brand" href="#">
+            <img src="../assets/img/logo.png" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            Online LogBook
+        </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item" id="home">
+                <a class="nav-link active text-dark" href="#!">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-dark cursor" data-toggle="dropdown"  role="button" aria-haspopup="true"
+                    aria-expanded="false">Students</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item text-dark" href="#!import">Import</a>
+                    <a class="dropdown-item text-dark" href="#!manage">Manage Data</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-dark cursor" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Logs</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item text-dark" href="#!sat">Students</a>
+                    <a class="dropdown-item text-dark" href="#!activity">Activity</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-dark cursor" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="fa fa-cog"></i>    
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <h6 class="dropdown-header">Settings</h6>
+                    <a class="dropdown-item text-dark" href="#!password">Change Password</a>
+                    <div ng-controller="LogOut">
+                        <a class="dropdown-item text-dark" href="#" ng-click="Logout()">Logout</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="main-container" class="container" ng-view>
+        
+    </div>
+
+    <script src="../assets/js/include.js"></script>
+    <script src="../dist/popper/popper.js"></script>
+    <script src="../dist/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../dist/datatables/datatables.min.js"></script>
+    <script src="../dist/datatables/Buttons-1.6.1/js/buttons.bootstrap4.min.js"></script>
+    <script src="../dist/excel/jszip.js"></script>
+    <script src="../dist/excel/xlsx.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.min.js"></script>
+    <script src="../node_modules/angular-js-xlsx/angular-js-xlsx.js"></script>
+    <script src="../node_modules/angular-datatables/dist/angular-datatables.js"></script>
+    <script src="../node_modules/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.js"></script>
+    <script src="../node_modules/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.min.js"></script>
+    <script src="../node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+    <script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+    <script src="../node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="../dist/fontawesome/js/all.js"></script>
+    <script src="../node_modules/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="../node_modules/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="../assets/js/routes.js"></script> 
+</body>
+</html>

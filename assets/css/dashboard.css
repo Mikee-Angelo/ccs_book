@@ -1,0 +1,35 @@
+.navbar {
+    background: linear-gradient(-45deg, #ffe082, #ffee58, #ffd54f, #ffc107);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#idnum {
+    text-transform: uppercase;
+}
+.cursor{
+    cursor: pointer;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.td-fix {
+    width: 50px;
+    max-width: 50px;
+}

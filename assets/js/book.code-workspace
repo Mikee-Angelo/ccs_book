@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "/Applications/MAMP/htdocs/book-v1"
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/book"
+		},
+		{
+			"path": "/Users/mad/Desktop/book"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

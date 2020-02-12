@@ -1,0 +1,74 @@
+<div class="my-auto">
+    <div class="col-sm-10 mx-auto mt-2">
+        <a href="#!manage"><- Back to List</a>
+        
+        <div class="card mt-2 shadow mb-5 bg-white rounded" ng-controller="Edit">
+            <div class="card-header">
+                <h5>Edit Student</h5>
+                <input type="checkbox" class="refresh" data-toggle="toggle">
+            </div>
+
+            <div class="card-body p-5">
+                <form action="POST" id="editfrm" enctype="multipart/form-data">
+                    <div class="row h-100">
+                        <div class="col-sm-6 mh-100 text-center my-auto">
+                            <div class="u-img-container text-center">
+                                <img src="{{ datas.img_path == '' ? 'https://img.icons8.com/material/100/000000/user-female-circle.png' : datas.img_path }}" alt="Profile Thumbnail" class="w-50 mb-2" id="preview">
+                            </div>     
+                                                   
+                            <div class="form-group" >
+                                <label for="img_upload">Student Photo *</label><br>
+                                <input type="file" name="img_upload" id="img_upload" accept=".jpg, .png, .jpeg">
+                            </div>
+                        </div>
+    
+                        <div class="col-sm-6">
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="rfid">RFID Number * </label>
+                                        <input type="{{ datas.rfid == '' ? text : number}}" class="form-control" value="{{datas.rfid}}" name="rfid" id="rfid" aria-describedby="rfidHelp">
+            
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                </div> 
+                                
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="course">Course *</label>
+                                        <select class="custom-select" name="course" id="course">
+                                            <option value="{{datas.course}}" selected>{{datas.course}}</option>
+                                            <option value="BSIT">BSIT</option>
+                                            <option value="BSHRM">BSHRM</option>
+                                            <option value="BSED">BSED</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="idnum">ID Number *</label>
+                                <input type="text" class="form-control" value="{{datas.id_num.toUpperCase()}}" name="idnum" id="idnum" aria-describedby="IDNumberHelp">
+                                <div class="invalid-feedback">
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="fname">Name *</label>
+                                <input type="text" class="form-control" value="{{ datas.f_name }}" name="fname" id="fname" aria-describedby="rfidHelp">
+                                <div class="invalid-feedback">
+                                </div>
+                            </div>
+            
+                            <button type="submit" id="editbtn" name="submit" class="btn btn-primary btn-block">Submit</button>
+    
+                        </div>
+                    </div>                        
+                </form>           
+            </div>
+        </div>
+        
+
+    </div>
+</div>

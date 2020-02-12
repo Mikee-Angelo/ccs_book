@@ -1,0 +1,40 @@
+{
+  "name": "ccs-book",
+  "version": "1.0.0",
+  "description": "Booking App for SBCI-CSS for modernization of logging of students.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w book",
+    "build": "electron-packager . --all --electron-version=7.1.9"
+  },
+  "author": "Michael Angelo De Leon",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.0.0-rc.2",
+    "angular": "^1.7.9",
+    "angular-datatables": "^0.6.2",
+    "angular-js-xlsx": "0.0.3",
+    "angular-resource": "^1.7.9",
+    "angular-route": "^1.7.9",
+    "angular-ui-router": "^1.0.24",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "jpkleemans-angular-validate": "^1.1.3",
+    "jquery": "^3.4.1",
+    "jquery-validation": "^1.19.1",
+    "js-cookie": "^2.2.1",
+    "ng-file-upload": "^12.2.13",
+    "ng-table": "^3.0.1",
+    "serialport": "^8.0.7",
+    "socket.io-client": "^2.3.0",
+    "usb-detection": "^4.7.0",
+    "xlsx": "^0.15.4"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.3.2",
+    "electron-packager": "^14.2.1",
+    "electron-rebuild": "^1.10.0"
+  }
+}

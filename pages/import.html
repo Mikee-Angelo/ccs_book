@@ -1,0 +1,38 @@
+
+<div class="import-container d-flex justify-content-center mx-auto mt-2 col-md-12 col-lg-6">
+    <div class="card px-3">
+        <div class="card-body">
+            <h4 class="text-center">Import excel here</h4>
+            <div class="input-group" ng-controller="ImportField">
+                <div class="custom-file">
+                    <input type="file" ngf-select="SelectFile($file)" onchange="angular.element(this).scope().Upload(event)" />
+                    <button type="button" class="btn btn-primary ml-n5" ng-click="SubmitExcel()" value="Upload">Import</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+
+<h4 class="text-center mt-5">
+    Data 
+</h4>
+
+<div ng-controller="ImportTable as showCase">
+        <table datatable="ng" dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" class="table table-hover table-striped">      
+            <thead class="thead-dark">
+                <tr>
+                    <th>Course </th>
+                    <th>Name</th>
+                    <th>Rfid</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="person in persons">
+                <td>{{ person.Course }}</td>
+                <td>{{ person.Name }}</td>
+                <td>{{ person.Rfid }}</td>
+            </tr>
+            </tbody>
+        </table>
+</div>
