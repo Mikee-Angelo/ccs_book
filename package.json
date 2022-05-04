@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@popperjs/core": "^2.0.0-rc.2",
-    "angular": "^1.7.9",
+    "angular": "^1.8.3",
     "angular-datatables": "^0.6.2",
     "angular-js-xlsx": "0.0.3",
     "angular-resource": "^1.7.9",
